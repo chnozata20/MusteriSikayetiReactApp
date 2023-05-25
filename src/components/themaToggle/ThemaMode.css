@@ -1,0 +1,85 @@
+.themaToggle{
+    display: flex;
+    width: min-content;
+    height: min-content;
+}
+.themaToggle body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.themaToggle label {
+	width:8vw;
+	height:5vh;
+	position: relative;
+	display: flex;
+	background: #ebebeb;
+	border-radius: 200px;
+	box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+	cursor: pointer;
+	transition: 0.3s;
+}
+.themaToggle label:after {
+	content: "";
+	width:2.5vw;
+	height: 4vh;
+	position: absolute;
+	top:0.5vh;
+	left:.5vw;
+	background: linear-gradient(180deg,#ffcc89,#d8860b);
+	border-radius: 180px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+.themaToggle input {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+.themaToggle input:checked + label {
+	background: #242424;
+}
+.themaToggle input:checked + label:after {
+	left:7.5vw;
+	transform: translateX(-100%);
+	background: linear-gradient(180deg,#777,#3a3a3a);
+}
+.themaToggle label:active:after{
+	width: 3vw;
+}
+.themaToggle .background {
+	width:100vw;
+	height: 100vh;
+	background: #fff;
+	z-index: -1;
+	position: absolute;
+	transition: 0.3s;
+}
+.themaToggle input:checked + label + .background {
+	background:#242424;
+}
+.themaToggle label svg {
+	position: absolute;
+	width: 1.5vw;
+    height: 2.5vh;
+	top:1.25vh;
+	z-index: 100;
+}
+.themaToggle label svg.sun {
+	left:1vw;
+	fill:#fff;
+	transition: 0.3s;
+}
+.themaToggle label svg.moon {
+	left:5.5vw;
+	fill:#7e7e7e;
+	transition: 0.3s;
+}
+.themaToggle input:checked + label svg.sun {
+	fill:#7e7e7e;
+}
+.themaToggle input:checked + label svg.moon {
+	fill:#fff;
+}

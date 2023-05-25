@@ -82,10 +82,10 @@ export default function Sidebar({ children }) {
           <button
             className={
               "button-main-1 " +
-              (activePage === "main" ? " button-main-1-active" : "")
+              (activePage === "anotherPage" ? " button-main-1-active" : "")
             }
             onClick={() => {
-              setActivePage("main");
+              setActivePage("anotherPage");
               navigate("/main");
             }}
           >
@@ -158,10 +158,10 @@ export default function Sidebar({ children }) {
           </button>
           <button
             className={"button-main-1".concat(
-              activePage === "main-side" ? " button-main-1-active" : ""
+              activePage === "anotherPage-side" ? " button-main-1-active" : ""
             )}
             onClick={() => {
-              setActivePage("main-side");
+              setActivePage("anotherPage-side");
               navigate("/main");
             }}
           >

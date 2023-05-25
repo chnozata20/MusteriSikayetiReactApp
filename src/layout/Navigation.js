@@ -4,12 +4,16 @@ import user from "../assets/user-3.png";
 import notification from "../assets/notification-bell.png";
 import upArrow from "../assets/up-arrow.png";
 import downArrow from "../assets/down-arrow.png";
+import ThemaMode from "../components/themaToggle/ThemaMode";
 
 export default function Navigation() {
   return (
     <div className="user-bar-parent">
       <div className="page-style">
+      
         <div className="icons-userbar">
+        <ThemaMode></ThemaMode>
+
           <img className="logo-userbar" alt="user" src={notification} />
           <img className="logo-userbar" alt="user" src={user} />
         </div>
@@ -33,7 +37,6 @@ export default function Navigation() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            marginLeft: "1rem",
           }}
         >
           <img
@@ -44,6 +47,7 @@ export default function Navigation() {
           />
           
         </button>
+
       </div>
     </div>
   );

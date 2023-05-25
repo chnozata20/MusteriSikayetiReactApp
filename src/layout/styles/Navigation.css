@@ -9,9 +9,10 @@
 .user-bar-parent .page-style{
     display: flex;
     flex-direction: row;
-    padding: 1%;
-    padding-right: 2rem;
     align-items: center;
+    padding-right: 2rem;
+    height: 100%;
+    gap: 1vw;
 }
 
 .arrow-ico-userbar {
@@ -25,7 +26,6 @@
 .icons-userbar .logo-userbar {
     height: 3vh;
     width: 1.5vw;
-    margin-right: 1rem;
 }
 .logo-userbar:hover{
     opacity: 0.5;
@@ -40,6 +40,10 @@
 }
 .icons-userbar{
     margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
 }
 .user-bar-parent .page-style div .logo-userbar{
     height: 3vh;
