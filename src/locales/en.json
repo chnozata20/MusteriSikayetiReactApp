@@ -1,0 +1,10 @@
+{
+  "pages": {
+    "Main": {
+      "sidebarHeader1": "Navigation",
+      "sidebar_main_page": "Main",
+      "sidebar_another_page": "Another Page"
+
+    }
+  }
+}

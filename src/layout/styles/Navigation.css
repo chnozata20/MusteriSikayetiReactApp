@@ -1,0 +1,47 @@
+.user-bar-parent{
+    width: 100%;
+    background-color: #fff;
+    height: 7%;
+    z-index: 5;
+    position: absolute;
+    
+}
+.user-bar-parent .page-style{
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    padding-right: 2rem;
+    align-items: center;
+}
+
+.arrow-ico-userbar {
+    height: 2vh;
+    width: 1vw;
+    filter: invert(50%);
+}
+.arrow-ico-userbar:hover{
+    opacity: 0.5;
+}
+.icons-userbar .logo-userbar {
+    height: 3vh;
+    width: 1.5vw;
+    margin-right: 1rem;
+}
+.logo-userbar:hover{
+    opacity: 0.5;
+}
+.notification-userbar {
+    height: 3.25vh;
+    width: 1.5vw;
+    margin-left: 1rem;
+}
+.notification-userbar:hover{
+    opacity: 0.5;
+}
+.icons-userbar{
+    margin-left: auto;
+}
+.user-bar-parent .page-style div .logo-userbar{
+    height: 3vh;
+    width: 1.5vw;
+}

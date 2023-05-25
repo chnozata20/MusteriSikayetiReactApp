@@ -1,0 +1,9 @@
+{
+  "pages": {
+    "Main": {
+      "sidebarHeader1": "Navigasyon",
+      "sidebar_main_page": "Ana Sayfa",
+      "sidebar_another_page": "Diğer Sayfa"
+    }
+  }
+}

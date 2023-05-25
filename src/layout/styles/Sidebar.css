@@ -1,0 +1,191 @@
+.main-page-style {
+    margin-top: auto;
+    background: #e9eeff;
+    width: 96%;
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+.main-page-style-side{
+    width: 84%;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.main-page-style-2 {
+    background: #263644;
+    width: 16vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    z-index: 6;
+    overflow-y: auto;
+    -webkit-transition: min-width 0.5s, width 0.5s;
+    transition: min-width 0.5s, width 0.5s;
+    overflow: hidden;
+
+}
+
+.main-page-style-2-side {
+    width: 0vw;
+}
+
+.logo-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    height: 7vh;
+}
+
+
+
+
+
+.hr-position {
+    height: 0.1vh;
+    color: #fff;
+    background-color: #fff;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+
+
+.button-main-1:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.main-page-style-2 .button-main-1 {
+    font-size: 0.7vw;
+    line-height: 2.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition-duration: .2s;
+    color: #b8b8b8;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.375rem;
+    text-align: left;
+    padding-left: 1rem;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.main-page-style-2-close .button-main-1 {
+    width: 100%;
+    transition-duration: .2s;
+    color: #b8b8b8;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.375rem;
+    height: 7vh;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.button-main-1:disabled {
+    pointer-events: none;
+}
+
+.button-main-1:hover {
+    background-color: #1f2938;
+}
+
+.button-main-1-active {
+    background-color: #1f2938!important;
+    
+}
+
+.button-main-1:focus {
+    background-color: #1f2938;
+}
+
+
+.h7-style {
+    font-size: 0.9vw;
+    padding-left: 1rem;
+    color: #b8b8b8;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.main-page-style-2-close {
+    background: #263644;
+    width: 4vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    z-index: 6;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    overflow: hidden;
+}
+
+.main-page-style-2-close-side {
+    width: 0vw;
+}
+
+.main-page-style-2-close .logo-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    height: 7vh;
+    margin-bottom: 2vh;
+}
+
+.main-page-style-2-close .new-sla-button {
+    background: #263644;
+    font-size: 0.7vw;
+    width: 80%;
+    margin-left: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    box-sizing: border-box;
+    border-color: hsla(0, 0%, 100%, .2);
+    border-width: 1px;
+    border-radius: 0.375rem;
+    transition-duration: .2s;
+    color: #fff;
+    background-color: #fcb459;
+    margin-bottom: 1rem;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.arrow-button-right {
+    background-color: transparent;
+    border: none;
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    margin-top: auto;
+
+}
+
+.arrow-button-left:hover {
+    opacity: 0.8;
+}
+
+.arrow-button-left {
+    background-color: transparent;
+    border: none;
+    margin-top: auto;
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.arrow-button-right:hover {
+    opacity: 0.8;
+}
