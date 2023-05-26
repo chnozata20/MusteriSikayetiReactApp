@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./ThemaMode.css"
 
 export default function ThemaMode() {
+
+  useEffect(() => {
+    const toggle = document.getElementById('darkmode-toggle');
+
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.documentElement.style.setProperty('--backgroundColor', '#000');
+        document.documentElement.style.setProperty('--textColor', '#fff');
+      } else {
+        document.documentElement.style.setProperty('--backgroundColor', '#e9eeff');
+        document.documentElement.style.setProperty('--textColor', '#000');
+      }
+    });
+
+    return () => {
+      toggle.removeEventListener('change', () => {});
+    };
+  }, []);
+
   return (
     <div className='themaToggle'>
     <meta charSet="UTF-8" />
