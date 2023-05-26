@@ -1,2 +1,6 @@
 .main-parent{
+    width: 20vw;
+    height: 10vh;   
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
 }
