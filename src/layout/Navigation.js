@@ -18,7 +18,6 @@ export default function Navigation() {
           <img className="logo-userbar" alt="user" src={user} />
         </div>
         {/* <label style={{color:"black", display:"flex", fontSize:"0.8vw", fontWeight:"normal"}}>{(props.fn).concat(" ").concat(props.ln)}</label> */}
-
         <label
           style={{
             color: "black",
