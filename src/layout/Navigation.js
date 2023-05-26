@@ -45,9 +45,7 @@ export default function Navigation() {
             src={downArrow}
             // src={props.profileComp === false ? downArrow : upArrow}
           />
-          
         </button>
-
       </div>
     </div>
   );
