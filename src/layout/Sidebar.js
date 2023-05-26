@@ -17,7 +17,6 @@ export default function Sidebar({ children }) {
   const [local, setLocal] = useState(localStorage.getItem("language"));
   const [langFile, setLangFile] = useState(local === "English" ? en : tr);
   const [activePage, setActivePage] = useState("main-side");
-
   useEffect(() => {
     console.log(activePage);
   }, [activePage]);
