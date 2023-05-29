@@ -1,6 +1,6 @@
 .main-parent{
-    width: 20vw;
-    height: 10vh;   
+    width: 200vh;
+    height: 100vh;   
     background-color: var(--backgroundColor);
     color: var(--textColor);
 }
