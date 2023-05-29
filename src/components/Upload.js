@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Upload.css";
-const Upload = () => {
+import * as xlsx from "xlsx";
+
+const Upload = (props) => {
+
+  const [file, setFile] = useState();
+  
+  function ReadUploadFile (e){
+    if (e.target.files) {
+      setFile(e.target.files[0]);
+    }
+    e.preventDefault();
+    if (e.target.files) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const data = e.target.result;
+            const workbook = xlsx.read(data, { type: "array" });
+            const sheetName = workbook.SheetNames[0];
+            const worksheet = workbook.Sheets[sheetName];
+            const json = xlsx.utils.sheet_to_json(worksheet);
+            props.setDataFromExcel(json)
+            console.log("json");
+            console.log(json);
+        };
+        reader.readAsArrayBuffer(e.target.files[0]);
+    }
+}
+
   return (
  
     <>
@@ -17,8 +43,7 @@ const Upload = () => {
           id="file"
           accept=".xlsx"
           required="required"
-          // onChange={handleFileChange}
-          // onChange={ReadUploadFile}
+          onChange={ReadUploadFile}
         />
         <button
           className="upload-btn"

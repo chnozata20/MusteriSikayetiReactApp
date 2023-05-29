@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDrop } from "react-dnd";
 import Draggable from 'react-draggable';
 import "./DragandDrop.css";
 import Column from "./Column";
 
-const DragandDrop = () => {
+const DragandDrop = (props) => {
+
+  useEffect(()=>{
+    if(props.dataFromExcel.length > 0){
+      let arr = [];
+      const objectToArr = Object.entries(props.dataFromExcel[0]);
+      objectToArr.map((item) => 
+          (arr.push({name : item[0]}))
+      )
+      setColumns(arr)
+    }
+  }, [props.dataFromExcel])
+
   const [columns, setColumns] = useState([
-    { name: "File 1" },
-    { name: "File 2" },
-    { name: "File 3" },
-    { name: "File 4" },
-    { name: "File 5" },
-    { name: "File 6" },
-    { name: "File 7" },
+    // { name: "File 1" },
+    // { name: "File 2" },
+    // { name: "File 3" },
+    // { name: "File 4" },
+    // { name: "File 5" },
+    // { name: "File 6" },
+    // { name: "File 7" },
   ]);
 
   const [files, setFiles] = useState([]);
