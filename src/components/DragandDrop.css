@@ -4,10 +4,17 @@
     gap:3rem;
     margin-left: 2rem;
     /* justify-content: space-between; */
+    /* background-color: red; */
+}
+.headers{
+  display: flex;
+  flex-direction: row;
+  gap:3rem;
+  /* margin-left: 2rem; */
 }
 .Board1 {
     width: 20rem;
-    height: 40rem;
+    height: 30rem;
     /* border: 1px solid #263644; */
     background-color: white;
     border-radius: .5rem;
@@ -15,7 +22,7 @@
   }
   .Board2{
     width: 20rem;
-    height: 40rem;
+    height: 30rem;
     /* border: 1px solid #263644; */
     background-color: white;
     border-radius: .5rem;
@@ -26,7 +33,7 @@
   } */
   .Board3{
     width: 46rem;
-    height: 40rem;
+    height: 30rem;
     /* border: 1px solid #263644; */
     background-color: white;
     border-radius: .5rem;

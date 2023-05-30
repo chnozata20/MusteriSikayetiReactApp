@@ -90,7 +90,8 @@ const DragandDrop = (props) => {
         </div>
         <div className="Board3"
         ref={removeFromfilesRef}
-        ><span className="columnsBg">DETAILS</span><div className="mini">
+        >
+          <span className="columnsBg">DETAILS</span><div className="mini">
 
         
         {files.map((p, i) => (
