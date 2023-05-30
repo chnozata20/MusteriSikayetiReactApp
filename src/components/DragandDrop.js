@@ -73,9 +73,6 @@ const DragandDrop = (props) => {
           ))}
 
         </div>
-
-
-
         <div className="Board2"
         ref={addTofilesRef}
         ><span className="columnsBg">COLUMN 2</span>
@@ -93,7 +90,9 @@ const DragandDrop = (props) => {
         </div>
         <div className="Board3"
         ref={removeFromfilesRef}
-        ><span className="columnsBg">DETAILS</span>
+        ><span className="columnsBg">DETAILS</span><div className="mini">
+
+        
         {files.map((p, i) => (
            <div className="fileStyle">
               <Column
@@ -103,8 +102,12 @@ const DragandDrop = (props) => {
                 playerType="files"
                 onDropPlayer={removeColumnFromfiles}
               />
+              
                </div>
+               
             ))}
+          
+            </div>
         </div>
       </div>
     </>

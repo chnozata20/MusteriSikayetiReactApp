@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDrag } from "react-dnd";
+import "./Column.css";
 
 const Column = ({ item, playerType, onDropPlayer, index }) => {
   const [{ isDragging }, dragRef] = useDrag({
