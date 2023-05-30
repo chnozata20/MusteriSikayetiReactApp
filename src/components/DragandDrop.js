@@ -1,21 +1,18 @@
 import { useEffect, useState } from "react";
 import { useDrop } from "react-dnd";
-import Draggable from 'react-draggable';
+import Draggable from "react-draggable";
 import "./DragandDrop.css";
 import Column from "./Column";
 
 const DragandDrop = (props) => {
-
-  useEffect(()=>{
-    if(props.dataFromExcel.length > 0){
+  useEffect(() => {
+    if (props.dataFromExcel.length > 0) {
       let arr = [];
       const objectToArr = Object.entries(props.dataFromExcel[0]);
-      objectToArr.map((item) => 
-          (arr.push({name : item[0]}))
-      )
-      setColumns(arr)
+      objectToArr.map((item) => arr.push({ name: item[0] }));
+      setColumns(arr);
     }
-  }, [props.dataFromExcel])
+  }, [props.dataFromExcel]);
 
   const [columns, setColumns] = useState([
     // { name: "File 1" },
@@ -50,34 +47,31 @@ const DragandDrop = (props) => {
     setFiles((prev) => prev.filter((_, i) => item.index !== i));
     setColumns((prev) => [...prev, item]);
   };
-  
+
   return (
     <>
-
+      <div className="headersss">
+        <span className="columnsBg1">COLUMN 1</span>
+        <span className="columnsBg2">COLUMN 2</span>
+        <span className="columnsBg3">DETAILS</span>
+      </div>
       <div className="Boards">
-
-        <div className="Board1"
-        ref={removeFromfilesRef}
-        > <span className="columnsBg">COLUMN 1</span>
-
-        {columns.map((p, i) => (
-         <div className="fileStyle">
-          <Column
-          item={p}
-          key={i}
-          playerType="column"
-          onDropPlayer={moveColumnTofiles}
-          index={i}
-          />
-          </div>
+        <div className="Board1" ref={removeFromfilesRef}>
+          {columns.map((p, i) => (
+            <div className="fileStyle">
+              <Column
+                item={p}
+                key={i}
+                playerType="column"
+                onDropPlayer={moveColumnTofiles}
+                index={i}
+              />
+            </div>
           ))}
-
         </div>
-        <div className="Board2"
-        ref={addTofilesRef}
-        ><span className="columnsBg">COLUMN 2</span>
-           {files.map((p, i) => (
-        <div className="fileStyle">
+        <div className="Board2" ref={addTofilesRef}>
+          {files.map((p, i) => (
+            <div className="fileStyle">
               <Column
                 item={p}
                 key={i}
@@ -86,29 +80,23 @@ const DragandDrop = (props) => {
                 onDropPlayer={removeColumnFromfiles}
               />
             </div>
-            ))}
+          ))}
         </div>
-        <div className="Board3"
-        ref={removeFromfilesRef}
-        >
-          <span className="columnsBg">DETAILS</span><div className="mini">
-
-        
-        {files.map((p, i) => (
-           <div className="fileStyle">
-              <Column
-                item={p}
-                key={i}
-                index={i}
-                playerType="files"
-                onDropPlayer={removeColumnFromfiles}
-              />
-              
-               </div>
-               
+        <div className="Board3" 
+        ref={removeFromfilesRef}>
+          <div className="mini">
+            {files.map((p, i) => (
+              <div className="fileStyle">
+                <Column
+                  item={p}
+                  key={i}
+                  index={i}
+                  playerType="files"
+                  onDropPlayer={removeColumnFromfiles}
+                />
+              </div>
             ))}
-          
-            </div>
+          </div>
         </div>
       </div>
     </>
