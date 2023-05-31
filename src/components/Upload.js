@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Upload.css";
 import * as xlsx from "xlsx";
 
 const Upload = (props) => {
 
   const [file, setFile] = useState();
+
+  
+
   
   function ReadUploadFile (e){
     if (e.target.files) {
@@ -19,9 +22,11 @@ const Upload = (props) => {
             const sheetName = workbook.SheetNames[0];
             const worksheet = workbook.Sheets[sheetName];
             const json = xlsx.utils.sheet_to_json(worksheet);
+          
             props.setDataFromExcel(json)
             console.log("json");
             console.log(json);
+           
         };
         reader.readAsArrayBuffer(e.target.files[0]);
     }
