@@ -4,15 +4,31 @@ import "./DragandDrop.css";
 import Column from "./Column";
 
 const DragandDrop = (props) => {
+
+
   useEffect(() => {
     if (props.dataFromExcel.length > 0) {
       let arr = [];
       const objectToArr = Object.entries(props.dataFromExcel[0]);
       objectToArr.map((item) => arr.push({ name: item[0]}));
       setColumns(arr);
-      console.log(Object.entries(props.dataFromExcel))
+
+      
+
     }
   }, [props.dataFromExcel]);
+
+
+
+  function getValueOfColumn(header){//get all value of the column via header
+    let arr = [];
+    props.dataFromExcel.map((item)=>{
+      arr.push({name : item[header]}); 
+    })
+    return arr
+  }
+
+
 
   console.log("props.dataFromExcel" , props.dataFromExcel[1])
 
@@ -33,6 +49,7 @@ const DragandDrop = (props) => {
   const [columns, setColumns] = useState([]);
 
   const [files, setFiles] = useState([]);
+
 
   const [{ isOver }, addTofilesRef] = useDrop({
     accept: "column",
@@ -99,13 +116,25 @@ const DragandDrop = (props) => {
           onMouseLeave={handleMouseLeave} >
             {/* <span className="detailText">{showDetails &&  'View Details' }</span> */}
               <div className="fileStyle">
-                <Column
+                {
+                  getValueOfColumn(p.name).map((item,index)=>
+                    <Column
+                      item={item}
+                      key={index}
+                      index={index}
+                      playerType="files"
+                      onDropPlayer={removeColumnFromfiles}
+                    />  
+                  )                
+                }
+
+                {/* <Column
                   item={p}
                   key={i}
                   index={i}
                   playerType="files"
-                   onDropPlayer={removeColumnFromfiles}
-                />
+                  onDropPlayer={removeColumnFromfiles}
+                /> */}
                 {/* {showDetails && <p>Bu buton üzerine gelince görüntülenen detaydır.</p>} */}
                 <span className="detailText">{showDetails &&   "View Details"}</span>
               </div>
