@@ -1,6 +1,7 @@
 .main-page-style {
     margin-top: auto;
-    background: #e9eeff;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
     width: 96vw;
     height: 93vh;
     display: flex;

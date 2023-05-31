@@ -97,3 +97,23 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
+.detailContainer{
+  border:none;
+  background-color: white;
+
+}
+.detailContainer:hover{
+  border:none;
+  background-color: lightgrey;
+  opacity: .2;
+  padding: 0;
+  margin:5px;
+  border-radius: 5px;
+  
+}
+.detailText{
+  text-align: center;
+  color:black;
+  
+}
