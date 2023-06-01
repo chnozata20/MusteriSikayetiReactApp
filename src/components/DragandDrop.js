@@ -89,13 +89,13 @@ const DragandDrop = (props) => {
           ))}
         </div>
         <div className="Board3" ref={removeFromfilesRef}>
-          <div className="mini">
-            {files.map((p, i) => (
-              // <button className="detailContainer">
+          <div className="columnHeader">
+            <div className="columnHeaderDetail">
+              {files.map((p, i) => (
                 <div onClick={handleClick} className="fileStyleDetail">
-                 {!showDetails && (<span className="showDetailText"
-                  
-                  >Show Details</span>)} 
+                  {!showDetails && (
+                    <span className="showDetailText">Show Details</span>
+                  )}
                   {showDetails ? (
                     getValueOfColumn(p.name).map((item, index) => (
                       <Column
@@ -105,8 +105,6 @@ const DragandDrop = (props) => {
                         playerType="files"
                         onDropPlayer={removeColumnFromfiles}
                       />
-        
-                   
                     ))
                   ) : (
                     <Column
@@ -116,12 +114,10 @@ const DragandDrop = (props) => {
                       playerType="files"
                       onDropPlayer={removeColumnFromfiles}
                     />
-                    
                   )}
-                  
                 </div>
-              // </button>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

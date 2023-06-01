@@ -89,7 +89,7 @@ const Upload = (props) => {
             <option value="-1">{"Excell(.xls)"}</option>
           </select>
         </div>
-        {/* <div className="select-sla-container">
+        <div className="select-sla-container">
           <label className="label-import-1">Select Languages</label>
           <select
             name="selectSla"
@@ -99,7 +99,7 @@ const Upload = (props) => {
             <option value="-1">{"English"}</option>
             <option value="-2">{"Turkish"}</option>
           </select>
-        </div> */}
+        </div>
         <div className="select-sla-container">
         <label className="label-import-1">Select Number of Languages</label>
         <select
