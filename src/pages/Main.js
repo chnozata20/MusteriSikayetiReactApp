@@ -10,7 +10,7 @@ export default function Main() {
   const [dataFromExcel, setDataFromExcel] = useState([])
 
   return (
-    <Layout>
+    <Layout >
       <DndProvider backend={HTML5Backend}>
       <div className='main-parent'>
       <Upload setDataFromExcel = {setDataFromExcel}/>

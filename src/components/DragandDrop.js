@@ -8,30 +8,28 @@ const DragandDrop = (props) => {
     if (props.dataFromExcel.length > 0) {
       let arr = [];
       const objectToArr = Object.entries(props.dataFromExcel[0]);
-      objectToArr.map((item) => arr.push({ name: item[0]}));
+      objectToArr.map((item) => arr.push({ name: item[0] }));
       setColumns(arr);
-      console.log(Object.entries(props.dataFromExcel))
     }
   }, [props.dataFromExcel]);
 
-  console.log("props.dataFromExcel" , props.dataFromExcel[1])
+  const handleClick = () => {
+    setShowDetails(!showDetails);
+  };
+
+  function getValueOfColumn(header) {
+    //get all value of the column via header
+    let arr = [];
+    props.dataFromExcel.map((item) => {
+      arr.push({ name: item[header] });
+    });
+    return arr;
+  }
+
+  console.log("props.dataFromExcel", props.dataFromExcel[1]);
 
   const [showDetails, setShowDetails] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowDetails(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowDetails(false);
-  };
-
-
-
-   
-
   const [columns, setColumns] = useState([]);
-
   const [files, setFiles] = useState([]);
 
   const [{ isOver }, addTofilesRef] = useDrop({
@@ -59,8 +57,8 @@ const DragandDrop = (props) => {
   return (
     <>
       <div className="headersss">
-        <span className="columnsBg1">COLUMN 1</span>
-        <span className="columnsBg2">COLUMN 2</span>
+        <span className="columnsBg1">MAIN FILE</span>
+        <span className="columnsBg2">DESIRED FILE</span>
         <span className="columnsBg3">DETAILS</span>
       </div>
       <div className="Boards">
@@ -90,29 +88,40 @@ const DragandDrop = (props) => {
             </div>
           ))}
         </div>
-        <div className="Board3" 
-        ref={removeFromfilesRef}>
-          <div className="mini"  > 
-          {files.map((p, i) => (
-          <button className="detailContainer"
-           onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave} >
-            {/* <span className="detailText">{showDetails &&  'View Details' }</span> */}
-              <div className="fileStyle">
-                <Column
-                  item={p}
-                  key={i}
-                  index={i}
-                  playerType="files"
-                   onDropPlayer={removeColumnFromfiles}
-                />
-                {/* {showDetails && <p>Bu buton üzerine gelince görüntülenen detaydır.</p>} */}
-                <span className="detailText">{showDetails &&   "View Details"}</span>
-              </div>
-          </button>
+        <div className="Board3" ref={removeFromfilesRef}>
+          <div className="mini">
+            {files.map((p, i) => (
+              // <button className="detailContainer">
+                <div onClick={handleClick} className="fileStyleDetail">
+                 {!showDetails && (<span className="showDetailText"
+                  
+                  >Show Details</span>)} 
+                  {showDetails ? (
+                    getValueOfColumn(p.name).map((item, index) => (
+                      <Column
+                        item={item}
+                        key={index}
+                        index={index}
+                        playerType="files"
+                        onDropPlayer={removeColumnFromfiles}
+                      />
+        
+                   
+                    ))
+                  ) : (
+                    <Column
+                      item={p}
+                      key={i}
+                      index={i}
+                      playerType="files"
+                      onDropPlayer={removeColumnFromfiles}
+                    />
+                    
+                  )}
+                  
+                </div>
+              // </button>
             ))}
-
-            
           </div>
         </div>
       </div>

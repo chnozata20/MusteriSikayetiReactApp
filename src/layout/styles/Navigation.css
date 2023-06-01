@@ -1,7 +1,9 @@
 .user-bar-parent{
     width: 100%;
-    background-color: #fff;
+    /* background: #216477; */
+    background-color: white;
     height: 7vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 4px 4px 8px;
     z-index: 5;
     position: absolute;
     

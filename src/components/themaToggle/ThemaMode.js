@@ -11,7 +11,7 @@ export default function ThemaMode() {
         document.documentElement.style.setProperty('--backgroundColor', '#000');
         document.documentElement.style.setProperty('--textColor', '#fff');
       } else {
-        document.documentElement.style.setProperty('--backgroundColor', '#e9eeff');
+        document.documentElement.style.setProperty('--backgroundColor', '#fff');
         document.documentElement.style.setProperty('--textColor', '#000');
       }
     });
