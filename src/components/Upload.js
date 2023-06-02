@@ -66,19 +66,6 @@ const Upload = (props) => {
           </button>
         </div>
         
-        {/* <div className="select-sla-container">
-        <div className="app">
-      <div  className="preview-values">
-      <label className="label-import-1">Select Languages</label>
-        {value}
-      </div>
-
-      <MultiSelect
-        onChange={handleOnchange}
-        options={languages}
-      />
-    </div>
-      </div> */}
         <div className="select-sla-container">
           <label className="label-import-1">Choose File Type</label>
           <select
@@ -87,17 +74,6 @@ const Upload = (props) => {
             // onChange={event => setSelectedSla(event.target.value)}
           >
             <option value="-1">{"Excell(.xls)"}</option>
-          </select>
-        </div>
-        <div className="select-sla-container">
-          <label className="label-import-1">Select Languages</label>
-          <select
-            name="selectSla"
-            id="selectSla"
-            // onChange={event => setSelectedSla(event.target.value)}
-          >
-            <option value="-1">{"English"}</option>
-            <option value="-2">{"Turkish"}</option>
           </select>
         </div>
         <div className="select-sla-container">
@@ -112,6 +88,18 @@ const Upload = (props) => {
           <option value="-2">{"3"}</option>
         </select>
       </div>
+        <div className="select-sla-container">
+          <label className="label-import-1">Select Languages</label>
+          <select
+            name="selectSla"
+            id="selectSla"
+            // onChange={event => setSelectedSla(event.target.value)}
+          >
+            <option value="-1">{"English"}</option>
+            <option value="-2">{"Turkish"}</option>
+          </select>
+        </div>
+        
 
         <div className="select-sla-container">
           <label className="label-import-1">Select Department</label>
