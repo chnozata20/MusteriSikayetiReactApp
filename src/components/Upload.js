@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Upload.css";
 import * as xlsx from "xlsx";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Upload = (props) => {
   const [file, setFile] = useState();
   const [isCsv, SetIsCsv] = useState(false);
   const [csvData, setCSVData] = useState([]);
   const [isActiveDropdown_1, setIsActiveDropdown_1] = useState(false);
+  let navigate = useNavigate();
 
   const languages = [
     { label: "English", value: "English" },
@@ -34,6 +36,7 @@ const Upload = (props) => {
             const row = rows[i].split(",");
             dataCsvArr.push(row);
           }
+          
           setCSVData(dataCsvArr);
         } else if (extension === "xlsx" || extension === "xls") {
           SetIsCsv(false);
@@ -41,14 +44,13 @@ const Upload = (props) => {
           const sheetName = workbook.SheetNames[0];
           const worksheet = workbook.Sheets[sheetName];
           const json = xlsx.utils.sheet_to_json(worksheet);
-
           props.setDataFromExcel(json);
           console.log("json");
           console.log(json);
-          // reader.readAsArrayBuffer(e.target.files[0]);
-        }
+          reader.readAsArrayBuffer(e.target.files[0]);
+        }console.log(csvData)
       };
-      reader.readAsArrayBuffer(e.target.files[0]);
+      // reader.readAsArrayBuffer(e.target.files[0]);
     }
   }
 
@@ -77,7 +79,7 @@ const Upload = (props) => {
             required="required"
             onChange={ReadUploadFile}
           />
-          <label className="ChooseFile" for="file">
+          <label className="ChooseFile" htmlFor="file">
             Choose File
           </label>
         </div>
@@ -97,7 +99,7 @@ const Upload = (props) => {
         </div>
         
         <div className="select-file-container">
-          <label className="label-import-1">Select Department</label>
+          <button onClick={() => navigate(`/editdepartment`)} className="editDepartmentbtn">Edit Department</button>
           <div
             className={
               isActiveDropdown_1 === true

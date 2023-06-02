@@ -86,7 +86,7 @@ export default function Sidebar({ children }) {
             }
             onClick={() => {
               setActivePage("anotherPage");
-              navigate("/main");
+              navigate("/editdepartment");
             }}
           >
             <img

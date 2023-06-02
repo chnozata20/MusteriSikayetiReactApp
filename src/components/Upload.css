@@ -35,7 +35,7 @@ input[type="file"] {
   background-color: #f3f6fd;
   color: #000;
   width: 100%;
-  margin-top: 1.2rem;
+  margin-top: 2.6rem;
   margin-left: 0;
   height: 3.5vh;
   display: flex;
@@ -74,9 +74,21 @@ input[type="file"] {
   width: 100%;
   height: 3.5vh;
   border-radius: 5px;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
-
+.editDepartmentbtn{
+  font-size: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f6fd;
+  text-align: center;
+  border: none;
+  width: 100%;
+  height: 3.5vh;
+  border-radius: 5px;
+  /* margin-top: 2rem; */
+}
 .checkbox-dropdown {
   width: 90%;
   padding: 0.5vw;
@@ -85,14 +97,9 @@ input[type="file"] {
   user-select: none;
   border-radius: 5px;
   background-color: #f3f6fd;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
-.checkbox-dropdown.is-active:after {
-  border-bottom-color: #000;
-  border-top-color: #fff;
-  margin-top: -9px;
-  border-radius: 5px;
-}
+
 .checkbox-dropdown-list {
   list-style: none;
   margin: 0;
