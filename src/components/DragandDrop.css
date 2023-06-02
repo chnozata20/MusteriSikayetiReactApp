@@ -35,7 +35,7 @@
   height: 30vw;
   background-color: #e9eeff;
   border-radius: 0 0 1vh 1vh;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: auto;
 }
 

@@ -23,7 +23,7 @@ const Column = ({ item, playerType, onDropPlayer, index }) => {
     ref={dragRef}
     >
        {item.name}
- 
+
     </div>
   )
 }
