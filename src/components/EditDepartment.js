@@ -15,13 +15,13 @@ export default function EditDepartment() {
                 <div
                   className={
                     isActiveDropdown_1 === true
-                      ? "checkbox-dropdown is-active"
-                      : "checkbox-dropdown"
+                      ? "checkbox-dropdown2 is-active"
+                      : "checkbox-dropdown2"
                   }
                   onClick={() => setIsActiveDropdown_1(!isActiveDropdown_1)}
                 >
                   Sub Departments
-                  <ul className="checkbox-dropdown-list">
+                  <ul className="checkbox-dropdown2-list">
                     <li>
                       <label>
                         <input type="checkbox" value="IT1" name="IT1" />
@@ -64,7 +64,7 @@ export default function EditDepartment() {
                 autoFocus
                 required
               />
-              <button className="SubmitDepartment">Edit Department</button>
+              <button className="SubmitDepartment">Submit</button>
             </div>
           </div>
         </div>

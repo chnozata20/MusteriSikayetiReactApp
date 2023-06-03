@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  width: 50vw;
   height: 40vw;
   background-color: #e9eeff;
   border-radius: 1vh;
@@ -57,7 +57,7 @@
     border-radius: 5px;
     /* margin-top: 2rem; */
   }
-  .checkbox-dropdown {
+  .checkbox-dropdown2 {
     width: 10vw;
     padding: 0.5vw;
     position: relative;
@@ -70,7 +70,7 @@
     height: 2rem;
   }
   
-  .checkbox-dropdown-list {
+  .checkbox-dropdown2-list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -90,27 +90,27 @@
   }
   
   
-  .checkbox-dropdown-list::-webkit-scrollbar {
+  .checkbox-dropdown2-list::-webkit-scrollbar {
     width: 8px;
   }
   
-  .checkbox-dropdown-list::-webkit-scrollbar-track {
+  .checkbox-dropdown2-list::-webkit-scrollbar-track {
     background-color: #e4e4e4;
     border-radius: 100px;
   }
   
-  .checkbox-dropdown-list::-webkit-scrollbar-thumb {
+  .checkbox-dropdown2-list::-webkit-scrollbar-thumb {
     background-color: #4d4d4f;
     border-radius: 100px;
   }
   
-  .is-active .checkbox-dropdown-list {
+  .is-active .checkbox-dropdown2-list {
     opacity: 1; /* display the dropdown */
     pointer-events: auto; /* make sure that the user still can select checkboxes */
     border-radius: 5px;
   }
   
-  .checkbox-dropdown-list li label {
+  .checkbox-dropdown2-list li label {
     display: block;
     border-bottom: 1px solid silver;
     padding: 10px;
@@ -118,7 +118,7 @@
     background-color: #f3f6fd;
   }
   
-  .checkbox-dropdown-list li label:hover {
+  .checkbox-dropdown2-list li label:hover {
     background-color: #338096;
     color: white;
   }
